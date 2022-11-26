@@ -1,0 +1,14 @@
+syntax = "proto3";
+package money.money;
+
+import "gogoproto/gogo.proto";
+import "money/money/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "money/x/money/types";
+
+// GenesisState defines the money module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
